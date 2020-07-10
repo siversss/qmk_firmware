@@ -18,9 +18,9 @@ enum custom_keycodes {
 #define KC_LC_OR_SPC LCTL_T(KC_SPC) // tap to space, hold for left ctrl
 #define KC_RC_OR_ENT RCTL_T(KC_ENT) // tap to enter, hold for right ctrl
 #define KC_LG_Z LGUI_T(KC_Z)        // tap for Z, hold for left GUI
-#define KC_RG_SLSH RGUI_T(KC_SLSH)  // tap for /, hold for right GUI
+#define KC_LG_SLSH LGUI_T(KC_SLSH)  // tap for /, hold for left GUI
 #define KC_LA_F LALT_T(KC_F)        // tap for f, hold for left alt
-#define KC_RA_J RALT_T(KC_J)        // tap for j, hold for right alt
+#define KC_LA_J LALT_T(KC_J)        // tap for j, hold for left alt
 #define KC_TLANG LGUI(LALT(KC_SPC)) // osx, cycle languages
 #define KC_RESET RESET
 #define KC_TURN_SYST MO(_SYST)
@@ -35,9 +35,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		//------+-------+---+---+------+----+                           +----+------+------+-----+---------+------+
 			 TAB  , Q     , W , E , R    , T  ,                             Y  , U    , I    , O   , P       , QUOT ,
 		//------+-------+---+---+------+----+                           +----+------+------+-----+---------+------+
-			 LSFT , NAV_A , S , D , LA_F , G  ,                             H  , RA_J , K    , L   , SYM_A   , RSFT ,
+			 LSFT , NAV_A , S , D , LA_F , G  ,                             H  , LA_J , K    , L   , SYM_A   , RSFT ,
 		//------+-------+---+---+------+----+-----------+   +-----------+----+------+------+-----+---------+------+
-			 EQL  , LG_Z  , X , C , V    , B  , TURN_SYST ,     NO        , N  , M    , COMM , DOT , RG_SLSH , MINS ,
+			 EQL  , LG_Z  , X , C , V    , B  , TURN_SYST ,     NO        , N  , M    , COMM , DOT , LG_SLSH , MINS ,
 		//------+-------+---+---+------+----+-----------+   +-----------+----+------+------+-----+---------+------+
 															HYPR , NO , LC_OR_SPC ,     RC_OR_ENT , NO , NO
 		//                      +------+----+-----------+   +-----------+----+------+
