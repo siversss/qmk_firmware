@@ -26,6 +26,7 @@ enum custom_keycodes {
 #define KC_TURN_SYST MO(_SYST)
 #define KC_LOCK LGUI(LCTL(KC_Q))
 #define KC_EEP_RST EEP_RST
+#define KC_RGUI_F13 RGUI_T(KC_F13)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -38,9 +39,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			 LSFT , NAV_A , S , D , LA_F , G  ,                             H  , LA_J , K    , L   , SYM_A   , RSFT ,
 		//------+-------+---+---+------+----+-----------+   +-----------+----+------+------+-----+---------+------+
 			 EQL  , LG_Z  , X , C , V    , B  , TURN_SYST ,     NO        , N  , M    , COMM , DOT , LG_SLSH , MINS ,
-		//------+-------+---+---+------+----+-----------+   +-----------+----+------+------+-----+---------+------+
-															NO   , LC_OR_SPC , NO ,     NO        , RC_OR_ENT , NO
-		//                      +------+----+-----------+   +-----------+----+------+
+		//------+-------+---+---+------+-----------+----+   +-----+-----+----+------+------+-----+---------+------+
+      					          RGUI_F13 , LC_OR_SPC , NO ,     NO  , RC_OR_ENT , NO
+		//                  +----------+-----------+----+   +-----+-----------+-----+
   ),
 
   [_NAV] = LAYOUT_kc(
