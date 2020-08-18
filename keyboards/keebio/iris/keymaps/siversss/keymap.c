@@ -28,6 +28,9 @@ enum custom_keycodes {
 #define KC_EEP_RST EEP_RST
 #define KC_RGUI_F13 RGUI_T(KC_F13)
 
+#define KC_LSFT_S LSFT_T(KC_S) // tap for S, hold for left shift
+#define KC_RSFT_L RSFT_T(KC_L) // tap for L, hold for right shift
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = LAYOUT_kc(
@@ -36,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		//------+-------+---+---+------+----+                           +----+------+------+-----+---------+------+
 			 TAB  , Q     , W , E , R    , T  ,                             Y  , U    , I    , O   , P       , QUOT ,
 		//------+-------+---+---+------+----+                           +----+------+------+-----+---------+------+
-			 LSFT , NAV_A , S , D , LA_F , G  ,                             H  , LA_J , K    , L   , SYM_A   , RSFT ,
+			 HYPR , NAV_A , LSFT_S , D , LA_F , G  ,                        H  , LA_J , K    , RSFT_L , SYM_A , HYPR ,
 		//------+-------+---+---+------+----+-----------+   +-----------+----+------+------+-----+---------+------+
 			 EQL  , LG_Z  , X , C , V    , B  , TURN_SYST ,     NO        , N  , M    , COMM , DOT , LG_SLSH , MINS ,
 		//------+-------+---+---+------+-----------+----+   +-----+-----+----+------+------+-----+---------+------+
@@ -50,11 +53,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		//----+----+----+----+------+----+                 +------+------+------+------+-----+-----+
 			 NO , NO , NO , NO , NO   , NO ,                   HOME , PGUP , UP   , PGDN , NO  , F12 ,
 		//----+----+----+----+------+----+                 +------+------+------+------+-----+-----+
-			 NO , NO , NO , NO , LALT , NO ,                   END  , LEFT , DOWN , RGHT , NO  , NO  ,
+			 NO , NO , LSFT, NO, LALT , NO ,                   END  , LEFT , DOWN , RGHT , NO  , NO  ,
 		//----+----+----+----+------+----+------+   +------+------+------+------+------+-----+-----+
 			 NO , NO , NO , NO , NO   , NO , NO   ,     NO   , NO   , F16  , F17  , F18  , NO  , NO  ,
 		//----+----+----+----+------+----+------+   +------+------+------+------+------+-----+-----+
-													 NO   , LCTL, NO ,     NO , RSFT   , NO
+													 NO   , LCTL, NO ,     NO , RCTL   , NO
 		//                   +------+----+------+   +------+------+------+
   ),
 
@@ -64,11 +67,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //-------+------+------+------+------+------+                 +----+------+----+----+----+----+
        NO    , NO   , NO   , NO   , LBRC , RBRC ,                   NO , NO   , NO , NO , NO , NO ,
     //-------+------+------+------+------+------+                 +----+------+----+----+----+----+
-       NO    , PIPE , BSLS , TILD , LPRN , RPRN ,                   NO , LALT , NO , NO , NO , NO ,
+       NO    , PIPE , BSLS , TILD , LPRN , RPRN ,                   NO , LALT , NO , RSFT , NO , NO ,
     //-------+------+------+------+------+------+------+   +------+----+------+----+----+----+----+
        NO    , NO   , NO   , GRV  , LCBR , RCBR , NO   ,     NO   , NO , NO   , NO , NO , NO , NO ,
     //-------+------+------+------+------+------+------+   +------+----+------+----+----+----+----+
-                                     NO  , LCTL   , NO ,     NO , RSFT , NO
+                                     NO  , LCTL   , NO ,     NO , RCTL , NO
     //                            +------+------+------+   +------+----+------+
 	),
 
