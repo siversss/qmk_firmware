@@ -27,6 +27,7 @@ enum custom_keycodes {
 #define KC_LOCK LGUI(LCTL(KC_Q))
 #define KC_EEP_RST EEP_RST
 #define KC_RGUI_F13 RGUI_T(KC_F13)
+#define KC_RGUI_F14 RGUI_T(KC_F14)
 
 #define KC_LSFT_S LSFT_T(KC_S) // tap for S, hold for left shift
 #define KC_RSFT_L RSFT_T(KC_L) // tap for L, hold for right shift
@@ -43,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		//------+-------+---+---+------+----+-----------+   +-----------+----+------+------+-----+---------+------+
 			 EQL  , LG_Z  , X , C , V    , B  , TURN_SYST ,     NO        , N  , M    , COMM , DOT , LG_SLSH , MINS ,
 		//------+-------+---+---+------+-----------+----+   +-----+-----+----+------+------+-----+---------+------+
-      					          RGUI_F13 , LC_OR_SPC , NO ,     NO  , RC_OR_ENT , NO
+      					          RGUI_F13 , LC_OR_SPC , NO ,     NO  , RC_OR_ENT , RGUI_F14
 		//                  +----------+-----------+----+   +-----+-----------+-----+
   ),
 
