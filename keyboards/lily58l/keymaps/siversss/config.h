@@ -2,9 +2,11 @@
 
 #ifdef RGBLIGHT_ENABLE
   #define RGBLIGHT_ANIMATIONS
-  #define RGBLIGHT_HUE_STEP 6 // number of steps to cycle through the hue by
-  #define RGBLIGHT_SAT_STEP 6 // number of steps to increment the saturation by
-  #define RGBLIGHT_VAL_STEP 6 // number of steps to increment the brightness by
+  // #define RGBLIGHT_STATIC_PATTERNS
+
+  #define RGBLIGHT_HUE_STEP 2 // number of steps to cycle through the hue by
+  #define RGBLIGHT_SAT_STEP 2 // number of steps to increment the saturation by
+  #define RGBLIGHT_VAL_STEP 2 // number of steps to increment the brightness by
   #define RGBLIGHT_SLEEP //  the RGB lighting will be switched off when the host goes to sleep
 #endif
 

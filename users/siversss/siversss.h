@@ -84,13 +84,13 @@ enum userspace_layers {
 
 #define _____RGB_L1_____ _____6_NO_____
 #define _____RGB_L2_____ _____6_NO_____
-#define _____RGB_L3_____ _____6_NO_____
-#define _____RGB_L4_____ _____6_NO_____
+#define _____RGB_L3_____ KC_NO, RGB_VAI, RGB_SAI, RGB_HUI, RGB_TOG, KC_NO
+#define _____RGB_L4_____ KC_NO, RGB_VAD, RGB_SAD, RGB_HUD, RGB_MOD , KC_NO
 		   
 #define _____RGB_R1_____ _____6_NO_____
 #define _____RGB_R2_____ _____6_NO_____
-#define _____RGB_R3_____ KC_NO, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, KC_NO
-#define _____RGB_R4_____ KC_NO, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, KC_NO
+#define _____RGB_R3_____ _____6_NO_____
+#define _____RGB_R4_____ _____6_NO_____
 
 #define _____RGB_L_THUMB_____ KC_NO , KC_NO, KC_NO
 #define _____RGB_R_THUMB_____ KC_NO , KC_NO, KC_NO

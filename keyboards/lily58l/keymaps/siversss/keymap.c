@@ -8,7 +8,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_____QWERTY_L2_____ ,                                           _____QWERTY_R2_____ ,
 		_____QWERTY_L3_____ ,                                           _____QWERTY_R3_____ ,
 		_____QWERTY_L4_____ , KC_MUTE,             KC_MEDIA_PLAY_PAUSE, _____QWERTY_R4_____ ,
-    KC_TURN_SYST, _____QWERTY_L_THUMB_____,    _____QWERTY_R_THUMB_____, KC_TURN_RGB
+    KC_TURN_RGB, _____QWERTY_L_THUMB_____,    _____QWERTY_R_THUMB_____, KC_NO
   ),
 
   [_NAV] = LAYOUT_wrapper(
@@ -43,6 +43,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		      KC_NO, _____RGB_L_THUMB_____,  _____RGB_R_THUMB_____, KC_NO
   )
 };
+
+/*
+void keyboard_post_init_user(void) {
+	rgblight_sethsv_noeeprom(0, 255, 255);
+	rgblight_enable_noeeprom();
+}
+*/
 
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
@@ -118,9 +125,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     else if (index == 1) {
         // Page up/Page down
         if (clockwise) {
-            tap_code(KC_BRIGHTNESS_DOWN);
-        } else {
             tap_code(KC_BRIGHTNESS_UP);
+        } else {
+            tap_code(KC_BRIGHTNESS_DOWN);
         }
     }
 }
