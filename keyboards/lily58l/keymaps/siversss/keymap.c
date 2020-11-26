@@ -44,12 +44,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-/*
+#define DISABLE_SIVERSSS_LIGHT
+
 void keyboard_post_init_user(void) {
-	rgblight_sethsv_noeeprom(0, 255, 255);
+#ifndef DISABLE_SIVERSSS_LIGHT
 	rgblight_enable_noeeprom();
+	rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+	rgblight_sethsv_noeeprom(0, 0, 0);
+#endif
 }
-*/
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+#ifndef DISABLE_SIVERSSS_LIGHT
+	if (keycode == KC_D) {
+		if (record->event.pressed)
+			/* rgblight_sethsv_at(50, 50, 50, 7); */
+			rgblight_sethsv_range(50, 50, 50, 6, RGBLED_NUM - 1);
+		else
+			rgblight_sethsv_range(0,0,0, 6, RGBLED_NUM - 1);
+		rgblight_set();
+	}
+#endif
+	return true;
+}
+	
 
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
