@@ -15,7 +15,7 @@
 // #define MASTER_RIGHT
 
 #undef DEBOUNCE
-#define DEBOUNCE 15
+#define DEBOUNCE 50
 
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
 // #define SPLIT_USB_DETECT
