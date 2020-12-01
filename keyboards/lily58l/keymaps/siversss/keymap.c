@@ -41,6 +41,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_____RGB_L3_____ ,                                 _____RGB_R3_____ ,
 		_____RGB_L4_____ , KC_NO,                   KC_NO, _____RGB_R4_____ ,
 		      KC_NO, _____RGB_L_THUMB_____,  _____RGB_R_THUMB_____, KC_NO
+	),
+
+	[_HYPR_LAYER] = LAYOUT_wrapper(
+    _____HYPR_L1_____ ,                                 _____HYPR_R1_____ ,
+		_____HYPR_L2_____ ,                                 _____HYPR_R2_____ ,
+		_____HYPR_L3_____ ,                                 _____HYPR_R3_____ ,
+		_____HYPR_L4_____ , KC_NO,                   KC_NO, _____HYPR_R4_____ ,
+		      KC_NO, _____HYPR_L_THUMB_____,  _____HYPR_R_THUMB_____, KC_NO
   )
 };
 

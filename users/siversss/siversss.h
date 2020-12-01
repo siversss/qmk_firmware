@@ -6,7 +6,8 @@ enum userspace_layers {
 	_NAV,
 	_SYM,
 	_SYST,
-	_RGB_LAYER
+	_RGB_LAYER,
+	_HYPR_LAYER
 };
 
 #define KC_SYM_A LT(_SYM, KC_SCLN)  // tap to ; | hold for sym layer
@@ -28,14 +29,16 @@ enum userspace_layers {
 #define KC_LSFT_S LSFT_T(KC_S) // tap for S, hold for left shift
 #define KC_RSFT_L RSFT_T(KC_L) // tap for L, hold for right shift
 
-#define _____QWERTY_L1_____          KC_ESC,    KC_1,      KC_2,      KC_3,    KC_4,    KC_5
-#define _____QWERTY_L2_____          KC_TAB,    KC_Q,      KC_W,      KC_E,    KC_R,    KC_T
-#define _____QWERTY_L3_____          KC_HYPR,   KC_NAV_A,  KC_LSFT_S, KC_D,    KC_LA_F, KC_G
-#define _____QWERTY_L4_____          KC_EQL,    KC_LG_Z,   KC_X,      KC_C,    KC_V,    KC_B
+#define KC_TURN_HYPR MO(_HYPR_LAYER)
+
+#define _____QWERTY_L1_____          KC_ESC,       KC_1,      KC_2,      KC_3,    KC_4,    KC_5
+#define _____QWERTY_L2_____          KC_TAB,       KC_Q,      KC_W,      KC_E,    KC_R,    KC_T
+#define _____QWERTY_L3_____          KC_TURN_HYPR, KC_NAV_A,  KC_LSFT_S, KC_D,    KC_LA_F, KC_G
+#define _____QWERTY_L4_____          KC_EQL,       KC_LG_Z,   KC_X,      KC_C,    KC_V,    KC_B
 
 #define _____QWERTY_R1_____          KC_6, KC_7    , KC_8    , KC_9      , KC_0       , KC_BSPC
 #define _____QWERTY_R2_____          KC_Y, KC_U    , KC_I    , KC_O      , KC_P       , KC_QUOT
-#define _____QWERTY_R3_____          KC_H, KC_LA_J , KC_K    , KC_RSFT_L , KC_SYM_A   , KC_HYPR
+#define _____QWERTY_R3_____          KC_H, KC_LA_J , KC_K    , KC_RSFT_L , KC_SYM_A   , KC_TURN_HYPR
 #define _____QWERTY_R4_____          KC_N, KC_M    , KC_COMM , KC_DOT    , KC_LG_SLSH , KC_MINS
 
 #define _____QWERTY_L_THUMB_____     KC_RGUI_F13 , KC_LC_OR_SPC , KC_NO
@@ -47,9 +50,9 @@ enum userspace_layers {
 #define _____NAV_L4_____ KC_NO , KC_NO , KC_NO   , KC_NO , KC_NO   , KC_NO 
 
 #define _____NAV_R1_____ KC_F6   , KC_F7   , KC_F8   , KC_F9   , KC_F10 , KC_F11
-#define _____NAV_R2_____ KC_HOME , KC_PGUP , KC_UP   , KC_PGDN , KC_NO  , KC_F12
-#define _____NAV_R3_____ KC_END  , KC_LEFT , KC_DOWN , KC_RGHT , KC_NO  , KC_NO 
-#define _____NAV_R4_____ KC_NO   , KC_F16  , KC_F17  , KC_F18  , KC_NO  , KC_NO 
+#define _____NAV_R2_____ KC_NO   , KC_HOME , KC_UP   , KC_PGUP , KC_NO  , KC_F12
+#define _____NAV_R3_____ KC_NO   , KC_LEFT , KC_DOWN , KC_RGHT , KC_NO  , KC_NO 
+#define _____NAV_R4_____ KC_NO   , KC_END  , KC_NO   , KC_PGDN , KC_NO  , KC_NO 
 
 #define _____NAV_L_THUMB_____ KC_NO , KC_LCTL, KC_NO
 #define _____NAV_R_THUMB_____ KC_NO , KC_RCTL, KC_NO
@@ -94,5 +97,18 @@ enum userspace_layers {
 
 #define _____RGB_L_THUMB_____ KC_NO , KC_NO, KC_NO
 #define _____RGB_R_THUMB_____ KC_NO , KC_NO, KC_NO
+
+#define _____HYPR_L1_____ HYPR(KC_ESC),  HYPR(KC_1),  HYPR(KC_2),  HYPR(KC_3),  HYPR(KC_4),  HYPR(KC_5)
+#define _____HYPR_L2_____ HYPR(KC_TAB),  HYPR(KC_Q),  HYPR(KC_W),  HYPR(KC_E),  HYPR(KC_R),  HYPR(KC_T)
+#define _____HYPR_L3_____ KC_NO,         HYPR(KC_A),  HYPR(KC_S),  HYPR(KC_D),  HYPR(KC_F),  HYPR(KC_G)
+#define _____HYPR_L4_____ HYPR(KC_EQL),  HYPR(KC_Z),  HYPR(KC_X),  HYPR(KC_C),  HYPR(KC_V),  HYPR(KC_B)
+
+#define _____HYPR_R1_____ HYPR(KC_6),  HYPR(KC_7),  HYPR(KC_8),  HYPR(KC_9),   HYPR(KC_0),    HYPR(KC_BSPC)
+#define _____HYPR_R2_____ HYPR(KC_Y),  HYPR(KC_U),  HYPR(KC_I),  HYPR(KC_O),   HYPR(KC_P),    HYPR(KC_QUOT)
+#define _____HYPR_R3_____ HYPR(KC_H),  HYPR(KC_J),  HYPR(KC_K),  HYPR(KC_L),   HYPR(KC_A),    KC_NO
+#define _____HYPR_R4_____ HYPR(KC_N),  KC_F16,      KC_F17,      KC_F18,       HYPR(KC_SLSH), HYPR(KC_MINS)
+
+#define _____HYPR_L_THUMB_____     KC_NO , KC_NO , KC_NO
+#define _____HYPR_R_THUMB_____     KC_NO , KC_NO , KC_NO
 
 #define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
