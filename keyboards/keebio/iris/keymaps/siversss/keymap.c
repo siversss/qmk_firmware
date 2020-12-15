@@ -32,7 +32,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_____SYST_L3_____ ,                                   _____SYST_R3_____ ,
 		_____SYST_L4_____ , KC_TRNS,                KC_RESET, _____SYST_R4_____ ,
 		             _____SYST_L_THUMB_____,  _____SYST_R_THUMB_____
-	)
+		),
+
+		[_HYPR_LAYER] = LAYOUT_wrapper(
+    _____HYPR_L1_____ ,                                 _____HYPR_R1_____ ,
+		_____HYPR_L2_____ ,                                 _____HYPR_R2_____ ,
+		_____HYPR_L3_____ ,                                 _____HYPR_R3_____ ,
+		_____HYPR_L4_____ , KC_NO,                   KC_NO, _____HYPR_R4_____ ,
+		            _____HYPR_L_THUMB_____,  _____HYPR_R_THUMB_____
+  )
 };
 
 void keyboard_post_init_user(void) {
