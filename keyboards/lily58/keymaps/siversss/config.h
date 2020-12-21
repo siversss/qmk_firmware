@@ -1,5 +1,11 @@
 #pragma once
 
+#undef RGBLED_SPLIT
+#define RGBLED_SPLIT { 28, 28 }
+
+#undef RGBLED_NUM
+#define RGBLED_NUM 56
+
 #ifdef RGBLIGHT_ENABLE
   #define RGBLIGHT_ANIMATIONS
   // #define RGBLIGHT_STATIC_PATTERNS
