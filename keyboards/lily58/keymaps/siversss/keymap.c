@@ -102,10 +102,16 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         // Volume control
         if (clockwise) {
-					tap_code16(RSFT(RALT(KC_VOLU)));
+					// tap_code16(LOPT(LSFT(KC_AUDIO_VOL_UP)));
+					// this doesn't work on catalina
+
+					tap_code16(KC_AUDIO_VOL_UP);
         } else {
-					tap_code16(RSFT(RALT(KC_VOLD)));
-        }
+					// tap_code16(LOPT(LSFT(KC_AUDIO_VOL_DOWN)));
+					// this doesn't work on catalina
+
+					tap_code16(KC_AUDIO_VOL_DOWN);
+				}
     }
     else if (index == 1) {
         // Page up/Page down
